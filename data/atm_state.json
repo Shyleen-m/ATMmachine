@@ -1,0 +1,10 @@
+{
+  "cash": 1000.0,
+  "paper": 1,
+  "ink": 1,
+  "firmware":"1.0.0",
+  "accounts": [
+    {"owner":"Charlie", "pin":"0000", "balance":50.00, "transactions":[]},
+    {"owner":"ngaa", "pin":"2006", "balance":100.00, "transactions":[]}
+  ]
+}
