@@ -27,30 +27,50 @@ public class TechnicianV2Panel {
             System.out.print("Select: ");
 
             int choice;
-            try { choice = Integer.parseInt(sc.nextLine()); }
-            catch (Exception e) { System.out.println("Invalid input."); continue; }
+            try {
+                choice = Integer.parseInt(sc.nextLine());
+            } catch (Exception e) {
+                System.out.println("Invalid input.");
+                continue;
+            }
 
             switch (choice) {
                 case 1 -> atm.viewATMStatus();
                 case 2 -> {
                     System.out.print("Enter cash amount to refill: ");
-                    int amount = Integer.parseInt(sc.nextLine());
-                    atm.refillCash(amount);
+                    try {
+                        int amount = Integer.parseInt(sc.nextLine());
+                        atm.refillCash(amount);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a number.");
+                    }
                 }
                 case 3 -> {
                     System.out.print("Enter cash amount to collect: ");
-                    int amount = Integer.parseInt(sc.nextLine());
-                    atm.collectCash(amount);
+                    try {
+                        int amount = Integer.parseInt(sc.nextLine());
+                        atm.collectCash(amount);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a number.");
+                    }
                 }
                 case 4 -> {
                     System.out.print("Enter sheets to refill: ");
-                    int sheets = Integer.parseInt(sc.nextLine());
-                    atm.refillPaper(sheets);
+                    try {
+                        int sheets = Integer.parseInt(sc.nextLine());
+                        atm.refillPaper(sheets);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a number.");
+                    }
                 }
                 case 5 -> {
                     System.out.print("Enter ink units to refill: ");
-                    int units = Integer.parseInt(sc.nextLine());
-                    atm.refillInk(units);
+                    try {
+                        int units = Integer.parseInt(sc.nextLine());
+                        atm.refillInk(units);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a number.");
+                    }
                 }
                 case 6 -> {
                     System.out.print("Enter new firmware version: ");
