@@ -1,9 +1,0 @@
-{
-  "cash": 5000.0,
-  "paper": 3,
-  "ink": 3,
-  "accounts": [
-    {"owner":"SHY", "pin":"1234", "balance":55.00, "transactions":[]},
-    {"owner":"NGAA", "pin":"2006", "balance":0.00, "transactions":[]}
-  ]
-}
